@@ -15,4 +15,4 @@ A clean, modern product preview card featuring a perfume bottle. This project fo
 * **Mobile-first workflow** – Ensuring a seamless experience on all devices.
 
 ## 📸 Preview
-![Design Preview](./images/Képernyőkép 2026-05-15 212614.png) 
+![Design Preview](https://.images/Képernyőkép 2026-05-15 212614.png) 
