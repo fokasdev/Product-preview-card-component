@@ -1,0 +1,126 @@
+:root {
+    /* Elsődleges színek */
+    --dark-cyan: #3c8067;       /* A gomb és az ár színe */
+    --very-dark-cyan: #1a4032;  /* Gomb hover állapotához */
+    --cream: #f2ebe3;           /* Az oldal háttere */
+    
+    /* Semleges színek */
+    --very-dark-blue: #1c232b;  /* A parfüm neve (cím) */
+    --dark-grayish-blue: #6c7289;/* A leírás szövege és a régi ár */
+    --white: #ffffff;           /* A kártya fehér háttere */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cream);
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.product-card{
+    height: 29rem;
+    background-color:var(--white);
+    border-radius: 0.9rem;
+    display: flex;
+    
+    
+}
+
+.product-card img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.9rem 0 0 0.9rem;
+}
+
+.product-image{
+    height: 100%;
+}
+
+.product-content{
+    padding: 0.2rem 2rem;
+}
+
+.category{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    margin-top: 25px;
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+}
+
+.product-name{
+    font-family: "Fraunces", sans-serif;
+    max-width: 250px;
+    font-size: 2.3rem;
+    color: black;
+}
+
+.description{
+    font-family: "Montserrat", sans-serif;
+    max-width: 250px;
+    font-size: 0.95rem;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.current-price{
+    font-family: "Fraunces", sans-serif;
+    font-size: 2rem;
+    color: var(--dark-cyan);
+}
+
+.old-price{
+    font-family: "Montserrat", sans-serif;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    color: var(--very-dark-blue);
+}
+
+
+.add-to-cart-btn{
+    background-color: var(--dark-cyan);
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 90px;
+    border-radius: 0.9rem;
+    cursor: pointer;
+}
+
+.add-to-cart-btn img{
+    margin-right: 0.8rem;
+    vertical-align: middle;
+}
+
+.add-to-cart-btn:hover{
+    background-color: var(--very-dark-cyan);
+}
+
+
+@media (max-width: 29rem) {
+    /* Minden, ami ide kerül, csak telefonon fog látszódni! */
+    
+    .product-card {
+        flex-direction: column; /* Egymás alá rakja a képet és a szöveget */
+        width: 90%;            /* Ne legyen fix 28rem, hanem töltse ki a kijelzőt */
+        max-width: 340px;      /* De ne legyen túl óriási se */
+    }
+
+    .product-image img { 
+        /* Itt érdemes kicserélni a képet a mobil verzióra, 
+           vagy csak beállítani a magasságát */
+        height: 240px;
+        object-fit: cover;
+    }
+}
